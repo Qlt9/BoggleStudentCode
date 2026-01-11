@@ -1,9 +1,9 @@
-Name: YOUR NAME HERE
+Name: Jacob Lowe
 
-| Date    |  Time  |                                     Update |
-|:--------|:------:|-------------------------------------------:|
-| April 5 | 9-10pm | I tried to write abstract, efficient code. |
-|         |        |                                            |
+| Date  |   Time    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Update |
+|:------|:---------:|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Jan 8 |  5-6 pm   | My initial thinking about how to approach this problem was putting the dictionary into a TST and then using BFS or DFS to find the complete words and then comparing the results of the BFS or DFS to the TST to see whether it was a valid word or not. Additionally I was also thinking about using DFS instead of BFS because DFS can find deep words and then keep backtracking while BFS would have to explore all starting points and then store more partial words. |
+| Jan 9 | 9-9:55 am |                                I had to make 2 methods inside of my TST such as the hasPrefix method because I was thinking that I needed a method to see if theres any words in my dictionary TST that began with the prefix I had from my DFS searches. Initially I was thinking about using hashmap or something like that for storing words in goodWords because then I wouldn't have to check for duplicates, but I tried it and it was a bit slower for some reason. |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.

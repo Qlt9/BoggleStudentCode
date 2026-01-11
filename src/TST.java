@@ -4,14 +4,33 @@ public class TST {
     private Node root;
 
     /**
-     * Each Node contains its own charater, as well as references to its three children.
+     * Each Node contains its own character, as well as references to its three children.
      * If this Node's character is the terminus of a coded word, it will also contain
      * the relevant code.
      */
     private class Node {
         Node left, mid, right;
         char c;
-        int code;
+        int code = EMPTY;
+    }
+
+    public boolean hasPrefix(String s) {
+        return hasPrefix(s, root, 0);
+    }
+
+    public boolean hasPrefix(String s, Node n, int depth) {
+        if (n == null) return false;
+        char current = s.charAt(depth);
+        if (current < n.c) {
+            return hasPrefix(s, n.left, depth);
+        } else if (current > n.c) {
+            return hasPrefix(s, n.right, depth);
+        } else {
+            if (depth == s.length() - 1) {
+                return true;
+            }
+            return hasPrefix(s, n.mid, depth + 1);
+        }
     }
 
     /**
